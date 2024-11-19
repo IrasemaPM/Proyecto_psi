@@ -13,7 +13,7 @@ book:
     - costo.qmd
     - acciones.qmd
 
-bibliography: references.bib
+bibliography: Bibliografia.bib
 
 format:
   html:
