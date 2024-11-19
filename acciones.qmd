@@ -1,9 +1,27 @@
 # Justificación de las acciones
 
-En la sección @Sec-DModel se observo como el conjunto principal de acciones que se consideran. En esta sección se definirán explícitamente estas acciones.
+En la sección **3** se observo como el conjunto principal de acciones que se consideran esta dada por intervalos. Consideramos que los valores de $\psi$ va aumentando o disminuyendo en $0.1$. Lo que nos lleva
 
--    **Portarse bien:** serán los valores cuando $\psi=0.5,0.6,0.7$ o $\psi=0.8$
+-   **Portarse bien:** serán los valores cuando $\psi=0.5,0.6,0.7$ o $\psi=0.8$
 
 -   **Portarse normal:** serán los valores cuando $\psi=0.9,1,1.2$
 
 -   **Portarse mal:** serán los valores cuando $\psi=1.3,1.4,\dots$ o $\psi=2$
+
+Cada una de estas acciones deben tener una recompensa y estara dada por la siguiente tabla
+
+| $$              
+ X_{t}            
+ $$               | $$              
+                   X_{t+1}          
+                   $$               | Recompesa |
+|-----------------|-----------------|-----------|
+| Portarse bien   | Portarse bien   | -0.5      |
+| Portarse bien   | Portarse normal | 1         |
+| Portarse bien   | Portarse mal    | 2         |
+| Portarse normal | Portarse bien   | 0.5       |
+| Portarse normal | Portarse normal | 1         |
+| Portarse normal | Portarse mal    | -0.5      |
+| Portarse mal    | Portarse bien   | -1        |
+| Portarse mal    | Portarse normal | -0.5      |
+| Portarse mal    | Portarse mal    | 0.5       |
