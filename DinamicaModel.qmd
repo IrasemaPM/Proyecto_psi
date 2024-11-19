@@ -12,9 +12,9 @@ En esta sección veremos cómo evoluciona el sistema atreves del tiempo $t$. La 
 
 -   $R_{t+1}=\gamma I_{t}-(\mu +\xi) R_{t}$
 
-En la @DiagramaModel se observa
+En la siguiente figura es una representacion de la cadena de Markov descrita anteriormente.
 
-![Diagrama que representa los estado en el tiempo t](EstadosSVVIRS.JPG){#DiagramaModel fig-align="center"}
+![Diagrama de la cadena de Markov en el tiempo t](EstadosSVVIRS.JPG){#DiagramaModel fig-align="center"}
 
 Las acciones representan los valores del índice de comportamiento $(\psi)$. Supondremos que los valores del índice de comportamiento están restringidos al intervalo $[0.5,2]$. Las acciones consideradas en nuestro modelo están dividas en tres principales acciones:
 
@@ -24,4 +24,4 @@ Las acciones representan los valores del índice de comportamiento $(\psi)$. Sup
 
 -   Si $\psi\in (1.2,2]$ entonces diremos que las personas se portan mal, es decir, que las personas no siguen las medidas de prevención.
 
-Supondremos que las personas toman decisiones diarias mediante unas distribución $x_{t} Uni[0.5,2]$ el periodo de observación será de un año. Como se ha mencionado con anterioridad el objetivo de este trabajo es encontrar el valor de $\psi$ que permita tener la incidencia acumulada más pequeña al final del año. Entonces la probabilidad de tener $i$ de incidencia acumulada y cambiar el comportamiento $\alpha$ en el tiempo $t$ y pasar al estado $j$ está dada por: $$P_{ij}(\alpha)=P[x_{t+1}=j|x_{t}=i,a_{t}=\alpha]$$
+Supondremos que las personas toman decisiones diarias mediante unas distribución $x_{t} \backsim Uni[0.5,2]$ el periodo de observación será de un año. Como se ha mencionado con anterioridad el objetivo de este trabajo es encontrar el valor de $\psi$ que permita tener la incidencia acumulada más pequeña al final del año. Entonces la probabilidad de tener $i$ de incidencia acumulada y cambiar el comportamiento $\alpha$ en el tiempo $t$ y pasar al estado $j$ está dada por: $$P_{ij}(\alpha)=P[x_{t+1}=j|x_{t}=i,a_{t}=\alpha]$$
