@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -201,10 +221,15 @@ window.Quarto = {
 </header>
 
 
-<p>En la literatura existen una variedad de modelos en los cuales consideran la vacunación como medida de prevención para el control de enfermedades [Jorge, y mas modelos]. Sin embargo, este medio de control llega a presentar algunas fallas como son: la falla de grado, falla en la toma y falla en la duración [Maclean]. En la modelación de enfermedades respiratorias con ecuaciones diferenciales, se suele considerar que las vacunas tienen una falla tipo de grado [Jorge y mas modelos]. Por otro lado, Pedroza, et. el, proponen un modelo de ecuaciones diferenciales donde consideran que la vacuna tiene dos tipos de fallas: la falla de grado y la falla en la toma.</p>
-<p>En este ultimo trabajo, proponen un índice de comportamiento (<span class="math inline">\(\psi\)</span>) el cual permite medir que tan riguroso pueden seguir las medidas de prevención una vez que son vacunados. En el modelo que proponen este índice solo afecta a los vacunados no inmunes</p>
+<p>En la literatura existen una variedad de modelos tipo SIRS en los cuales consideran la vacunación como medida de prevención para el control de enfermedades <span class="citation" data-cites="kribs2000simple">(<a href="#ref-kribs2000simple" role="doc-biblioref">Kribs-Zaleta y Velasco-Hernández 2000</a>)</span>. Sin embargo, este medio de control llega a presentar algunas fallas como son: la falla de grado, falla en la toma y falla en la duración [Maclean]. En la modelación de enfermedades respiratorias con ecuaciones diferenciales, se suele considerar que las vacunas tienen una falla tipo de grado [Jorge y mas modelos]. Por otro lado, Pedroza, et. el, proponen un modelo de ecuaciones diferenciales donde consideran que la vacuna tiene los tre tipos de fallas.</p>
+<p>En este ultimo trabajo, proponen un índice de comportamiento (<span class="math inline">\(\psi\)</span>) el cual permite medir que tan riguroso pueden seguir las medidas de prevención una vez que son vacunados. En el modelo que proponen este índice solo afecta a los vacunados no inmunes ya que supone que los vacunados que generan inmunidad no se pueden infectar. En este trabajo se desarrollará un proceso de decisión de Markov diseñado para identificar el conjunto de valores de <span class="math inline">\(\psi\)</span> que minimice la cantidad de infectados al finalizar un año</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-kribs2000simple" class="csl-entry" role="listitem">
+Kribs-Zaleta, Christopher M, y Jorge X Velasco-Hernández. 2000. <span>«A simple vaccination model with multiple endemic states»</span>. <em>Mathematical biosciences</em> 164 (2): 183-201.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
