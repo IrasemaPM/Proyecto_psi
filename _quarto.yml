@@ -6,7 +6,6 @@ book:
   author: "Irasema Pedroza Meza"
   date: "08/12/2024"
   chapters:
-    - index.qmd
     - intro.qmd
     - Formulacion.qmd
     - DinamicaModel.qmd
