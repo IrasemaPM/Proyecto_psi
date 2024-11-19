@@ -200,12 +200,78 @@ window.Quarto = {
 </header>
 
 
-<p>En la sección <span class="quarto-unresolved-ref">?sec-DModel</span> se observo como el conjunto principal de acciones que se consideran. En esta sección se definirán explícitamente estas acciones.</p>
+<p>En la sección <strong>3</strong> se observo como el conjunto principal de acciones que se consideran esta dada por intervalos. Consideramos que los valores de <span class="math inline">\(\psi\)</span> va aumentando o disminuyendo en <span class="math inline">\(0.1\)</span>. Lo que nos lleva</p>
 <ul>
 <li><p><strong>Portarse bien:</strong> serán los valores cuando <span class="math inline">\(\psi=0.5,0.6,0.7\)</span> o <span class="math inline">\(\psi=0.8\)</span></p></li>
 <li><p><strong>Portarse normal:</strong> serán los valores cuando <span class="math inline">\(\psi=0.9,1,1.2\)</span></p></li>
 <li><p><strong>Portarse mal:</strong> serán los valores cuando <span class="math inline">\(\psi=1.3,1.4,\dots\)</span> o <span class="math inline">\(\psi=2\)</span></p></li>
 </ul>
+<p>Cada una de estas acciones deben tener una recompensa y estara dada por la siguiente tabla</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 37%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math display">\[              
+X_{t}            
+\]</span></th>
+<th><span class="math display">\[              
+                   X_{t+1}          
+                   \]</span></th>
+<th>Recompesa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Portarse bien</td>
+<td>Portarse bien</td>
+<td>-0.5</td>
+</tr>
+<tr class="even">
+<td>Portarse bien</td>
+<td>Portarse normal</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Portarse bien</td>
+<td>Portarse mal</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Portarse normal</td>
+<td>Portarse bien</td>
+<td>0.5</td>
+</tr>
+<tr class="odd">
+<td>Portarse normal</td>
+<td>Portarse normal</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Portarse normal</td>
+<td>Portarse mal</td>
+<td>-0.5</td>
+</tr>
+<tr class="odd">
+<td>Portarse mal</td>
+<td>Portarse bien</td>
+<td>-1</td>
+</tr>
+<tr class="even">
+<td>Portarse mal</td>
+<td>Portarse normal</td>
+<td>-0.5</td>
+</tr>
+<tr class="odd">
+<td>Portarse mal</td>
+<td>Portarse mal</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
 
 
 

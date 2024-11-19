@@ -36,3 +36,7 @@ $$
 $$
 
 donde $\mathbf{X}$ es el espacio de los estados, $\{A(x): x \in X\}$ es el espacio de las acciones admisibles, $\mathbf{P}$ es la ley de transicion de modelo y $\mathbf{C}$ es la funcion de costo.
+
+En la siguiente figura se ilustra el cambio de un estado a otro por las acciones admisibles. Desarrollaremos la dinámica de la cadena de Markov en las siguientes secciones.
+
+![Diagrama del cambio de un estado a otro.](EstadosActions.JPG){#estadosAccion}
