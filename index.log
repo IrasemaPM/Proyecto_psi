@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.11.16)  19 NOV 2024 11:07
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.11.16)  19 NOV 2024 11:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -927,6 +927,11 @@ Missing character: There is no ∈ (U+2208) in font [lmroman10-regular]:mapping=
 [6]
 chapter 3.
 
+Underfull \hbox (badness 2435) in paragraph at lines 341--348
+[]\TU/lmr/m/n/10.95 Supondremos que las personas toman decisiones diarias mediante unas distribución
+ []
+
+
 
 [7
 
@@ -938,7 +943,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.361 \end{CSLReferences}
+l.359 \end{CSLReferences}
                           
 Here is how much of TeX's memory you used:
  23369 strings out of 475932
