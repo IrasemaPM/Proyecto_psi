@@ -2,12 +2,14 @@ project:
   type: book
 
 book:
-  title: "Proyecto_Psi"
-  author: "Norah Jones"
-  date: "19/11/2024"
+  title: "El valor optimo del indice de comportamiento"
+  author: "Irasema Pedroza Meza"
+  date: "08/12/2024"
   chapters:
     - index.qmd
     - intro.qmd
+    - Formulacion.qmd
+    - DinamicaMode.qmd
     - summary.qmd
     - references.qmd
 
