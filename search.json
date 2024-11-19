@@ -4,19 +4,19 @@
     "href": "index.html",
     "title": "El valor optimo del indice de comportamiento",
     "section": "",
-    "text": "Preface\nEn este libro se desarrollara el proyecto de la clase de Aprendizaje Reforzado.\n\n1 + 1\n\n2",
+    "text": "Prefacio\nEn este libro se desarrollara el proyecto de la clase de Aprendizaje Reforzado.",
     "crumbs": [
-      "Preface"
+      "Prefacio"
     ]
   },
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Introduction",
+    "title": "1  Introdución",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "En la literatura existen una variedad de modelos en los cuales consideran la vacunación como medida de prevención para el control de enfermedades [Jorge, y mas modelos]. Sin embargo, este medio de control llega a presentar algunas fallas como son: la falla de grado, falla en la toma y falla en la duración [Maclean]. En la modelación de enfermedades respiratorias con ecuaciones diferenciales, se suele considerar que las vacunas tienen una falla tipo de grado [Jorge y mas modelos]. Por otro lado, Pedroza, et. el, proponen un modelo de ecuaciones diferenciales donde consideran que la vacuna tiene dos tipos de fallas: la falla de grado y la falla en la toma.\nEn este ultimo trabajo, proponen un índice de comportamiento (\\(\\psi\\)) el cual permite medir que tan riguroso pueden seguir las medidas de prevención una vez que son vacunados. En el modelo que proponen este índice solo afecta a los vacunados no inmunes",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdución</span>"
     ]
   },
   {
@@ -24,7 +24,7 @@
     "href": "Formulacion.html",
     "title": "2  Formulación del Proceso de Decisión de Markov",
     "section": "",
-    "text": "Los estados de nuestro proceso de decisión de Markov representarán la proporción de la población en cada categoría del modelo propuesto por XXX:\n\n\\(S_{t}\\): Fracción de susceptibles en el tiempo \\(t\\).\n\\(V_{+t}\\): Fracción de vacunados inmunes en el tiempo \\(t\\).\n\\(V_{-t}\\): Fracción de vacunados no inmunes en el tiempo\\(t\\).\n\\(I_{t}\\): Fracción de infectados en el tiempo \\(t\\).\n\\(R_{t}\\): Fracción de recuperados en el tiempo \\(t\\).\n\nEl estado global del sistema en el tiempo \\(t\\) se presenta como\n\\[\nx_{t} = (S_{t}, V_{+t}, V_{-t}, I_{t}, R_{t})\n\\]\nEl escenario que consideraremos para cada \\(t \\in {0,1,\\dots, N}\\)para el proceso de Markov:\n\n\\(x_{t}\\): representa la dinámica de la enfermedad en el tiempo \\(t\\).\n\\(a_{t}\\): representa en qué escenario del índice de comportamiento se encuentra la población en el tiempo \\(t\\).\n\nAlgunos supuestos que estaremos considerando para nuestro proceso son:\n\nLas personas cambian su comportamiento en el tiempo\\(t\\) de forma instantánea.\nLas únicas personas que pueden cambiar su comportamiento son los vacunados no inmunes.\nSupondremos que las personas cambian su comportamiento bajo una distribución uniforme \\([0.5, 2]\\).\n\nBajo los supuestos anteriormente mencionados, consideramos el siguiente Modelo de Control de Markov.\n\\[\n(\\mathbf{X}, \\mathbf{A}, \\{A(x): x \\in X\\}, \\mathbf{P}, \\mathbf{C})\n\\]\ndonde \\(X\\) es el espacio de los",
+    "text": "Los estados de nuestro proceso de decisión de Markov representarán la proporción de la población en cada categoría del modelo propuesto por XXX:\n\n\\(S_{t}\\): Fracción de susceptibles en el tiempo \\(t\\).\n\\(V_{+t}\\): Fracción de vacunados inmunes en el tiempo \\(t\\).\n\\(V_{-t}\\): Fracción de vacunados no inmunes en el tiempo \\(t\\).\n\\(I_{t}\\): Fracción de infectados en el tiempo \\(t\\).\n\\(R_{t}\\): Fracción de recuperados en el tiempo \\(t\\).\n\nEl estado global del sistema en el tiempo \\(t\\) se presenta como\n\\[\nx_{t} = (S_{t}, V_{+t}, V_{-t}, I_{t}, R_{t})\n\\]\nEl escenario que consideraremos para cada \\(t \\in {0,1,\\dots, N}\\)para el proceso de Markov:\n\n\\(x_{t}\\): representa la dinámica de la enfermedad en el tiempo \\(t\\).\n\\(a_{t}\\): representa en qué escenario del índice de comportamiento se encuentra la población en el tiempo\\(t\\).\n\nAlgunos supuestos que estaremos considerando para nuestro proceso son:\n\nLas personas cambian su comportamiento en el tiempo \\(t\\) de forma instantánea.\nLas únicas personas que pueden cambiar su comportamiento son los vacunados no inmunes.\nSupondremos que las personas cambian su comportamiento bajo una distribución uniforme \\([0.5, 2]\\).\n\nBajo los supuestos anteriormente mencionados, consideramos el siguiente Modelo de Control de Markov.\n\\[\n(\\mathbf{X},  \\{A(x): x \\in X\\}, \\mathbf{P}, \\mathbf{C})\n\\]\ndonde \\(\\mathbf{X}\\) es el espacio de los estados, \\(\\{A(x): x \\in X\\}\\) es el espacio de las acciones admisibles, \\(\\mathbf{P}\\) es la ley de transicion de modelo y \\(\\mathbf{C}\\) es la funcion de costo.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Formulación del Proceso de Decisión de Markov</span>"
     ]
@@ -34,29 +34,9 @@
     "href": "DinamicaModel.html",
     "title": "3  Dinámica del Modelo",
     "section": "",
-    "text": "La dinámica del sistema evoluciona en el tiempo \\(t\\) e",
+    "text": "En esta sección veremos cómo evoluciona el sistema atreves del tiempo \\(t\\). La dinámica de la enfermedad esta representando por la siguiente cadena de Markov\n\n\\(S_{t+1}= \\mu -\\beta S_{t}I_{t}- (\\mu + \\phi)S_{t}+\\omega V_{+t}+\\xi R_{t}\\)\n\\(V_{+t+1}= \\phi\\_{+}(\\sigma)S_{t}-(\\mu+\\omega) V_{+t}\\)\n\\(V_{-t+1}=\\phi_{-}(\\sigma)S_{t}- \\psi(1-\\sigma) \\beta V_{-t} I_{t}-\\mu V_{-t}\\)\n\\(I_{t+1}= \\beta S_{t}I_{t}+\\psi(1-\\sigma) \\beta V_{-t} I_{t} -(\\mu+ \\gamma)I_{t}\\)\n\\(R_{t+1}=\\gamma I_{t}-(\\mu +\\xi) R_{t}\\)\n\nEn la se observa un\nLas acciones representan los valores del índice de comportamiento \\((\\psi)\\). Supondremos que los valores del índice de comportamiento están restringidos al intervalo \\([0.5,2]\\). Las acciones consideradas en nuestro modelo están dividas en tres principales acciones:\n\nSi \\(\\psi\\in [0.5,0.9)\\) entonces diremos que las personas se portan bien, es decir, que las personas siguen las medidas de prevención de forma estricta.\nSi \\(\\psi\\in [0.9,1.2]\\) entonces diremos que las personas se portan normal, es decir, que las personas siguen las medidas de prevención.\nSi \\(\\psi\\in (1.2,2]\\) entonces diremos que las personas se portan mal, es decir, que las personas no siguen las medidas de prevención.\n\nSupondremos que las personas toman decisiones diarias mediante unas distribución \\(x_{t} Uni[0.5,2]\\) el periodo de observación será de un año. Como se ha mencionado con anterioridad el objetivo de este trabajo es encontrar el valor de \\(\\psi\\) que permita tener la incidencia acumulada más pequeña al final del año. Entonces la probabilidad de tener \\(i\\) de incidencia acumulada y cambiar el comportamiento \\(\\alpha\\) en el tiempo \\(t\\) y pasar al estado \\(j\\) está dada por: \\[P_{ij}(\\alpha)=P[x_{t+1}=j|x_{t}=i,a_{t}=\\alpha]\\]",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dinámica del Modelo</span>"
-    ]
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "4  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n2",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Summary</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "References"
     ]
   }
 ]

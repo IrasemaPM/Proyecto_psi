@@ -138,13 +138,13 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Prefacio</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdución</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -157,18 +157,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./DinamicaModel.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dinámica del Modelo</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
@@ -205,7 +193,7 @@ window.Quarto = {
 <ul>
 <li><p><span class="math inline">\(S_{t}\)</span>: Fracción de susceptibles en el tiempo <span class="math inline">\(t\)</span>.</p></li>
 <li><p><span class="math inline">\(V_{+t}\)</span>: Fracción de vacunados inmunes en el tiempo <span class="math inline">\(t\)</span>.</p></li>
-<li><p><span class="math inline">\(V_{-t}\)</span>: Fracción de vacunados no inmunes en el tiempo<span class="math inline">\(t\)</span>.</p></li>
+<li><p><span class="math inline">\(V_{-t}\)</span>: Fracción de vacunados no inmunes en el tiempo <span class="math inline">\(t\)</span>.</p></li>
 <li><p><span class="math inline">\(I_{t}\)</span>: Fracción de infectados en el tiempo <span class="math inline">\(t\)</span>.</p></li>
 <li><p><span class="math inline">\(R_{t}\)</span>: Fracción de recuperados en el tiempo <span class="math inline">\(t\)</span>.</p></li>
 </ul>
@@ -216,19 +204,19 @@ x_{t} = (S_{t}, V_{+t}, V_{-t}, I_{t}, R_{t})
 <p>El escenario que consideraremos para cada <span class="math inline">\(t \in {0,1,\dots, N}\)</span>para el proceso de Markov:</p>
 <ul>
 <li><span class="math inline">\(x_{t}\)</span>: representa la dinámica de la enfermedad en el tiempo <span class="math inline">\(t\)</span>.</li>
-<li><span class="math inline">\(a_{t}\)</span>: representa en qué escenario del índice de comportamiento se encuentra la población en el tiempo <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(a_{t}\)</span>: representa en qué escenario del índice de comportamiento se encuentra la población en el tiempo<span class="math inline">\(t\)</span>.</li>
 </ul>
 <p>Algunos supuestos que estaremos considerando para nuestro proceso son:</p>
 <ul>
-<li>Las personas cambian su comportamiento en el tiempo<span class="math inline">\(t\)</span> de forma instantánea.</li>
+<li>Las personas cambian su comportamiento en el tiempo <span class="math inline">\(t\)</span> de forma instantánea.</li>
 <li>Las únicas personas que pueden cambiar su comportamiento son los vacunados no inmunes.</li>
 <li>Supondremos que las personas cambian su comportamiento bajo una distribución uniforme <span class="math inline">\([0.5, 2]\)</span>.</li>
 </ul>
 <p>Bajo los supuestos anteriormente mencionados, consideramos el siguiente Modelo de Control de Markov.</p>
 <p><span class="math display">\[
-(\mathbf{X}, \mathbf{A}, \{A(x): x \in X\}, \mathbf{P}, \mathbf{C})
+(\mathbf{X},  \{A(x): x \in X\}, \mathbf{P}, \mathbf{C})
 \]</span></p>
-<p>donde <span class="math inline">\(X\)</span> es el espacio de los</p>
+<p>donde <span class="math inline">\(\mathbf{X}\)</span> es el espacio de los estados, <span class="math inline">\(\{A(x): x \in X\}\)</span> es el espacio de las acciones admisibles, <span class="math inline">\(\mathbf{P}\)</span> es la ley de transicion de modelo y <span class="math inline">\(\mathbf{C}\)</span> es la funcion de costo.</p>
 
 
 
@@ -655,8 +643,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      <a href="./intro.html" class="pagination-link" aria-label="Introdución">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdución</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

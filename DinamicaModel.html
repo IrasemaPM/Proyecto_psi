@@ -30,7 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
 <link href="./Formulacion.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -138,13 +137,13 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Prefacio</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdución</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -157,18 +156,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./DinamicaModel.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dinámica del Modelo</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
@@ -201,7 +188,22 @@ window.Quarto = {
 </header>
 
 
-<p>La dinámica del sistema evoluciona en el tiempo <span class="math inline">\(t\)</span> e</p>
+<p>En esta sección veremos cómo evoluciona el sistema atreves del tiempo <span class="math inline">\(t\)</span>. La dinámica de la enfermedad esta representando por la siguiente cadena de Markov</p>
+<ul>
+<li><p><span class="math inline">\(S_{t+1}= \mu -\beta S_{t}I_{t}- (\mu + \phi)S_{t}+\omega V_{+t}+\xi R_{t}\)</span></p></li>
+<li><p><span class="math inline">\(V_{+t+1}= \phi\_{+}(\sigma)S_{t}-(\mu+\omega) V_{+t}\)</span></p></li>
+<li><p><span class="math inline">\(V_{-t+1}=\phi_{-}(\sigma)S_{t}- \psi(1-\sigma) \beta V_{-t} I_{t}-\mu V_{-t}\)</span></p></li>
+<li><p><span class="math inline">\(I_{t+1}= \beta S_{t}I_{t}+\psi(1-\sigma) \beta V_{-t} I_{t} -(\mu+ \gamma)I_{t}\)</span></p></li>
+<li><p><span class="math inline">\(R_{t+1}=\gamma I_{t}-(\mu +\xi) R_{t}\)</span></p></li>
+</ul>
+<p>En la se observa un</p>
+<p>Las acciones representan los valores del índice de comportamiento <span class="math inline">\((\psi)\)</span>. Supondremos que los valores del índice de comportamiento están restringidos al intervalo <span class="math inline">\([0.5,2]\)</span>. Las acciones consideradas en nuestro modelo están dividas en tres principales acciones:</p>
+<ul>
+<li><p>Si <span class="math inline">\(\psi\in [0.5,0.9)\)</span> entonces diremos que las personas se portan bien, es decir, que las personas siguen las medidas de prevención de forma estricta.</p></li>
+<li><p>Si <span class="math inline">\(\psi\in [0.9,1.2]\)</span> entonces diremos que las personas se portan normal, es decir, que las personas siguen las medidas de prevención.</p></li>
+<li><p>Si <span class="math inline">\(\psi\in (1.2,2]\)</span> entonces diremos que las personas se portan mal, es decir, que las personas no siguen las medidas de prevención.</p></li>
+</ul>
+<p>Supondremos que las personas toman decisiones diarias mediante unas distribución <span class="math inline">\(x_{t} Uni[0.5,2]\)</span> el periodo de observación será de un año. Como se ha mencionado con anterioridad el objetivo de este trabajo es encontrar el valor de <span class="math inline">\(\psi\)</span> que permita tener la incidencia acumulada más pequeña al final del año. Entonces la probabilidad de tener <span class="math inline">\(i\)</span> de incidencia acumulada y cambiar el comportamiento <span class="math inline">\(\alpha\)</span> en el tiempo <span class="math inline">\(t\)</span> y pasar al estado <span class="math inline">\(j\)</span> está dada por: <span class="math display">\[P_{ij}(\alpha)=P[x_{t+1}=j|x_{t}=i,a_{t}=\alpha]\]</span></p>
 
 
 
@@ -633,9 +635,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
