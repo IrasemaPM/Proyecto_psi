@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Dinámica del Modelo – El valor optimo del indice de comportamiento</title>
+<title>5&nbsp; Justificación de las acciones – El valor optimo del indice de comportamiento</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./costo.html" rel="next">
-<link href="./Formulacion.html" rel="prev">
+<link href="./costo.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -110,7 +109,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./DinamicaModel.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dinámica del Modelo</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./acciones.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Justificación de las acciones</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -155,7 +154,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./DinamicaModel.html" class="sidebar-item-text sidebar-link active">
+  <a href="./DinamicaModel.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dinámica del Modelo</span></span></a>
   </div>
 </li>
@@ -167,7 +166,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./acciones.html" class="sidebar-item-text sidebar-link">
+  <a href="./acciones.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Justificación de las acciones</span></span></a>
   </div>
 </li>
@@ -184,7 +183,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="Sec-DModel" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dinámica del Modelo</span></span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Justificación de las acciones</span></h1>
 </div>
 
 
@@ -201,28 +200,12 @@ window.Quarto = {
 </header>
 
 
-<p>En esta sección veremos cómo evoluciona el sistema atreves del tiempo <span class="math inline">\(t\)</span>. La dinámica de la enfermedad esta representando por la siguiente cadena de Markov</p>
+<p>En la sección <span class="quarto-unresolved-ref">?sec-DModel</span> se observo como el conjunto principal de acciones que se consideran. En esta sección se definirán explícitamente estas acciones.</p>
 <ul>
-<li><p><span class="math inline">\(S_{t+1}= \mu -\beta S_{t}I_{t}- (\mu + \phi)S_{t}+\omega V_{+t}+\xi R_{t}\)</span></p></li>
-<li><p><span class="math inline">\(V_{+t+1}= \phi\_{+}(\sigma)S_{t}-(\mu+\omega) V_{+t}\)</span></p></li>
-<li><p><span class="math inline">\(V_{-t+1}=\phi_{-}(\sigma)S_{t}- \psi(1-\sigma) \beta V_{-t} I_{t}-\mu V_{-t}\)</span></p></li>
-<li><p><span class="math inline">\(I_{t+1}= \beta S_{t}I_{t}+\psi(1-\sigma) \beta V_{-t} I_{t} -(\mu+ \gamma)I_{t}\)</span></p></li>
-<li><p><span class="math inline">\(R_{t+1}=\gamma I_{t}-(\mu +\xi) R_{t}\)</span></p></li>
+<li><p><strong>Portarse bien:</strong> serán los valores cuando <span class="math inline">\(\psi=0.5,0.6,0.7\)</span> o <span class="math inline">\(\psi=0.8\)</span></p></li>
+<li><p><strong>Portarse normal:</strong> serán los valores cuando <span class="math inline">\(\psi=0.9,1,1.2\)</span></p></li>
+<li><p><strong>Portarse mal:</strong> serán los valores cuando <span class="math inline">\(\psi=1.3,1.4,\dots\)</span> o <span class="math inline">\(\psi=2\)</span></p></li>
 </ul>
-<p>En la siguiente figura es una representacion de la cadena de Markov descrita anteriormente.</p>
-<div id="DiagramaModel" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="EstadosSVVIRS.JPG" class="img-fluid figure-img"></p>
-<figcaption>Diagrama de la cadena de Markov en el tiempo t</figcaption>
-</figure>
-</div>
-<p>Las acciones representan los valores del índice de comportamiento <span class="math inline">\((\psi)\)</span>. Supondremos que los valores del índice de comportamiento están restringidos al intervalo <span class="math inline">\([0.5,2]\)</span>. Las acciones consideradas en nuestro modelo están dividas en tres principales acciones:</p>
-<ul>
-<li><p>Si <span class="math inline">\(\psi\in [0.5,0.9)\)</span> entonces diremos que las personas se portan bien, es decir, que las personas siguen las medidas de prevención de forma estricta.</p></li>
-<li><p>Si <span class="math inline">\(\psi\in [0.9,1.2]\)</span> entonces diremos que las personas se portan normal, es decir, que las personas siguen las medidas de prevención.</p></li>
-<li><p>Si <span class="math inline">\(\psi\in (1.2,2]\)</span> entonces diremos que las personas se portan mal, es decir, que las personas no siguen las medidas de prevención.</p></li>
-</ul>
-<p>Supondremos que las personas toman decisiones diarias mediante unas distribución <span class="math inline">\(x_{t} \backsim Uni[0.5,2]\)</span> el periodo de observación será de un año. Como se ha mencionado con anterioridad el objetivo de este trabajo es encontrar el valor de <span class="math inline">\(\psi\)</span> que permita tener la incidencia acumulada más pequeña al final del año. Entonces la probabilidad de tener <span class="math inline">\(i\)</span> de incidencia acumulada y cambiar el comportamiento <span class="math inline">\(\alpha\)</span> en el tiempo <span class="math inline">\(t\)</span> y pasar al estado <span class="math inline">\(j\)</span> está dada por: <span class="math display">\[P_{ij}(\alpha)=P[x_{t+1}=j|x_{t}=i,a_{t}=\alpha]\]</span></p>
 
 
 
@@ -649,14 +632,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Formulacion.html" class="pagination-link" aria-label="Formulación del Proceso de Decisión de Markov">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Formulación del Proceso de Decisión de Markov</span></span>
+      <a href="./costo.html" class="pagination-link" aria-label="Descripción y justificación del costo">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Descripción y justificación del costo</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./costo.html" class="pagination-link" aria-label="Descripción y justificación del costo">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Descripción y justificación del costo</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

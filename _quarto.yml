@@ -18,8 +18,11 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
+    number-sections: true
+    crossref:true
   pdf:
     documentclass: scrreprt
+    number-sections: true
 
 editor: visual
 
