@@ -35,4 +35,4 @@ $$
 (\mathbf{X},  \{A(x): x \in X\}, \mathbf{P}, \mathbf{C})
 $$
 
-donde $\mathbf{X}$ es el espacio de los estados, $ \{A(x): x \in X\}$ es el espacio de las acciones admisibles, $\mathbf{P}$ es la ley de transicion de modelo y $\mathbf{C}$ es la funcion de costo. 
+donde $\mathbf{X}$ es el espacio de los estados, \$ {A(x): x \in X}\$ es el espacio de las acciones admisibles, $\mathbf{P}$ es la ley de transicion de modelo y $\mathbf{C}$ es la funcion de costo.
