@@ -1,13 +1,4 @@
----
-jupyter: python3
----
+# Introdución
+En la literatura existen una variedad de modelos en los cuales consideran la vacunación como medida de prevención para el control de enfermedades \[Jorge, y mas modelos\]. Sin embargo, este medio de control llega a presentar algunas fallas como son: la falla de grado, falla en la toma y falla en la duración \[Maclean\]. En la modelación de enfermedades respiratorias con ecuaciones diferenciales, se suele considerar que las vacunas tienen una falla tipo de grado \[Jorge y mas modelos\]. Por otro lado, Pedroza, et. el, proponen un modelo de ecuaciones diferenciales donde consideran que la vacuna tiene dos tipos de fallas: la falla de grado y la falla en la toma.
 
-# Introduction
-
-This is a book created from markdown and executable code.
-
-See @knuth84 for additional discussion of literate programming.
-
-```{python}
-1 + 1
-```
+En este ultimo trabajo, proponen un índice de comportamiento ($\psi$) el cual permite medir que tan riguroso pueden seguir las medidas de prevención una vez que son vacunados. En el modelo que proponen este índice solo afecta a los vacunados no inmunes
