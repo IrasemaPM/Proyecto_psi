@@ -10,6 +10,7 @@ book:
     - intro.qmd
     - Formulacion.qmd
     - DinamicaModel.qmd
+    - costo.qmd
 
 bibliography: references.bib
 
