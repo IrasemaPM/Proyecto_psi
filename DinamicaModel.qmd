@@ -12,7 +12,7 @@ En esta sección veremos cómo evoluciona el sistema atreves del tiempo $t$. La 
 
 -   $R_{t+1}=\gamma I_{t}-(\mu +\xi) R_{t}$
 
-En la [@DiagramaModel] se observa
+En la @DiagramaModel se observa
 
 ![Diagrama que representa los estado en el tiempo t](EstadosSVVIRS.JPG){#DiagramaModel fig-align="center"}
 
