@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -159,6 +188,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>En esta sección veremos cómo evoluciona el sistema atreves del tiempo <span class="math inline">\(t\)</span>. La dinámica de la enfermedad esta representando por la siguiente cadena de Markov</p>
+<ul>
+<li><p><span class="math inline">\(S_{t+1}= \mu -\beta S_{t}I_{t}- (\mu + \phi)S_{t}+\omega V_{+t}+\xi R_{t}\)</span></p></li>
+<li><p><span class="math inline">\(V_{+t+1}= \phi\_{+}(\sigma)S_{t}-(\mu+\omega) V_{+t}\)</span></p></li>
+<li><p><span class="math inline">\(V_{-t+1}=\phi_{-}(\sigma)S_{t}- \psi(1-\sigma) \beta V_{-t} I_{t}-\mu V_{-t}\)</span></p></li>
+<li><p><span class="math inline">\(I_{t+1}= \beta S_{t}I_{t}+\psi(1-\sigma) \beta V_{-t} I_{t} -(\mu+ \gamma)I_{t}\)</span></p></li>
+<li><p><span class="math inline">\(R_{t+1}=\gamma I_{t}-(\mu +\xi) R_{t}\)</span></p></li>
+</ul>
+<p>En la se observa un</p>
+<p>Las acciones representan los valores del índice de comportamiento <span class="math inline">\((\psi)\)</span>. Supondremos que los valores del índice de comportamiento están restringidos al intervalo <span class="math inline">\([0.5,2]\)</span>. Las acciones consideradas en nuestro modelo están dividas en tres principales acciones:</p>
+<ul>
+<li><p>Si <span class="math inline">\(\psi\in [0.5,0.9)\)</span> entonces diremos que las personas se portan bien, es decir, que las personas siguen las medidas de prevención de forma estricta.</p></li>
+<li><p>Si <span class="math inline">\(\psi\in [0.9,1.2]\)</span> entonces diremos que las personas se portan normal, es decir, que las personas siguen las medidas de prevención.</p></li>
+<li><p>Si <span class="math inline">\(\psi\in (1.2,2]\)</span> entonces diremos que las personas se portan mal, es decir, que las personas no siguen las medidas de prevención.</p></li>
+</ul>
+<p>Supondremos que las personas toman decisiones diarias mediante unas distribución <span class="math inline">\(x_{t} Uni[0.5,2]\)</span> el periodo de observación será de un año. Como se ha mencionado con anterioridad el objetivo de este trabajo es encontrar el valor de <span class="math inline">\(\psi\)</span> que permita tener la incidencia acumulada más pequeña al final del año. Entonces la probabilidad de tener <span class="math inline">\(i\)</span> de incidencia acumulada y cambiar el comportamiento <span class="math inline">\(\alpha\)</span> en el tiempo <span class="math inline">\(t\)</span> y pasar al estado <span class="math inline">\(j\)</span> está dada por: <span class="math display">\[P_{ij}(\alpha)=P[x_{t+1}=j|x_{t}=i,a_{t}=\alpha]\]</span></p>
 
 
 

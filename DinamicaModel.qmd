@@ -12,7 +12,9 @@ En esta sección veremos cómo evoluciona el sistema atreves del tiempo $t$. La 
 
 -   $R_{t+1}=\gamma I_{t}-(\mu +\xi) R_{t}$
 
-En la se observa un
+En la [@DiagramaModel] se observa
+
+![Diagrama que representa los estado en el tiempo t](EstadosSVVIRS.JPG){#DiagramaModel fig-align="center"}
 
 Las acciones representan los valores del índice de comportamiento $(\psi)$. Supondremos que los valores del índice de comportamiento están restringidos al intervalo $[0.5,2]$. Las acciones consideradas en nuestro modelo están dividas en tres principales acciones:
 
