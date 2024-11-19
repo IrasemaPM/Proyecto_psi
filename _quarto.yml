@@ -9,7 +9,6 @@ book:
     - intro.qmd
     - Formulacion.qmd
     - DinamicaModel.qmd
-    - references.qmd
 
 bibliography: references.bib
 
