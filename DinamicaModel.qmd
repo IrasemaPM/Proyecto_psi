@@ -2,15 +2,15 @@
 
 En esta sección veremos cómo evoluciona el sistema atreves del tiempo $t$. La dinámica de la enfermedad esta representando por la siguiente cadena de Markov
 
-$$S_{t+1}= \mu -\beta S_{t}I_{t}- (\mu + \phi)S_{t}+\omega V_{+t}+\xi R_{t} $$
+-   $S_{t+1}= \mu -\beta S_{t}I_{t}- (\mu + \phi)S_{t}+\omega V\_{+t}+\xi R_{t}$
 
-$$V_{+t+1}= \phi\_{+}(\sigma)S_{t}-(\mu+\omega) V_{+t}$$
+-   $V_{+t+1}= \phi\_{+}(\sigma)S_{t}-(\mu+\omega) V_{+t}$
 
-$$V_{-t+1}=\phi_{-}(\sigma)S_{t}- \psi(1-\sigma) \beta V_{-t} I-\mu V_{-t}$$
+-   $V_{-t+1}=\phi_{-}(\sigma)S_{t}- \psi(1-\sigma) \beta V_{-t} I-\mu V_{-t}$
 
-$$I_{t+1}= \beta S_{t}I_{t}+\psi(1-\sigma) \beta V_{-t} I_{t} -(\mu+ \gamma)I_{t}$$
+-   $I_{t+1}= \beta S_{t}I_{t}+\psi(1-\sigma) \beta V_{-t} I_{t} -(\mu+ \gamma)I_{t}$
 
-$$ R_{t+1}=\gamma I_{t}-(\mu +\xi) R_{t}$$
+-   $R_{t+1}=\gamma I_{t}-(\mu +\xi) R_{t}$
 
 En la
 
