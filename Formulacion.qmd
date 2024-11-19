@@ -1,0 +1,38 @@
+# Formulación del Proceso de Decisión de Markov
+
+Los estados de nuestro proceso de decisión de Markov representarán la proporción de la población en cada categoría del modelo propuesto por XXX:
+
+-   $S_{t}$: Fracción de susceptibles en el tiempo $t$.
+
+-   $V_{+t}$: Fracción de vacunados inmunes en el tiempo $t$.
+
+-   $V_{-t}$: Fracción de vacunados no inmunes en el tiempo$t$.
+
+-   $I_{t}$: Fracción de infectados en el tiempo $t$.
+
+-   $R_{t}$: Fracción de recuperados en el tiempo $t$.
+
+El estado global del sistema en el tiempo $t$ se presenta como
+
+$$
+x_{t} = (S_{t}, V_{+t}, V_{-t}, I_{t}, R_{t})
+$$
+
+El escenario que consideraremos para cada $t \in {0,1,\dots, N}$para el proceso de Markov:
+
+-   $x_{t}$: representa la dinámica de la enfermedad en el tiempo $t$.
+-   $a_{t}$: representa en qué escenario del índice de comportamiento se encuentra la población en el tiempo $t$.
+
+Algunos supuestos que estaremos considerando para nuestro proceso son:
+
+-   Las personas cambian su comportamiento en el tiempo$t$ de forma instantánea.
+-   Las únicas personas que pueden cambiar su comportamiento son los vacunados no inmunes.
+-   Supondremos que las personas cambian su comportamiento bajo una distribución uniforme $[0.5, 2]$.
+
+Bajo los supuestos anteriormente mencionados, consideramos el siguiente Modelo de Control de Markov.
+
+$$
+(\mathbf{X}, \mathbf{A}, \{A(x): x \in X\}, \mathbf{P}, \mathbf{C})
+$$
+
+donde $X$ es el espacio de los

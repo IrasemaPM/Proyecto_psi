@@ -1,0 +1,3 @@
+# Dinámica del Modelo
+
+La dinámica del sistema evoluciona en el tiempo $t$ e
