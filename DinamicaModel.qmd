@@ -1,4 +1,4 @@
-# Dinámica del Modelo
+# Dinámica del Modelo {#Sec-DModel}
 
 En esta sección veremos cómo evoluciona el sistema atreves del tiempo $t$. La dinámica de la enfermedad esta representando por la siguiente cadena de Markov
 

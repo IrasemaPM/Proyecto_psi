@@ -38,5 +38,15 @@
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Dinámica del Modelo</span>"
     ]
+  },
+  {
+    "objectID": "costo.html",
+    "href": "costo.html",
+    "title": "4  Descripción y justificación del costo",
+    "section": "",
+    "text": "En las secciones anteriores hemos mencionado que el objetivo es disminuir la incidencia acumulada en el tiempo \\(t=365\\). Por lo tanto, proponemos que la función de costo este dado por el costo de la enfermedad \\((C_{I})\\) y costo de vacunas con falla en la toma \\((C_{V})\\) sea\n\\[C_{I}(t)=c_{i}I_{t}\\] donde \\(c_{i}\\) es el costo unitario por persona infectada y \\(I_{t}\\)\n\\[C_{V-}(t)= c_{v}\\phi_{-} V_{-}\\] \\(c_{v}\\) es el costo de generar vacunas con falla en la toma y \\(\\phi_{-} S\\) es el número de susceptibles vacunados que no generan inmunidad. Ahora podemos calcular el impacto global que es: \\[C(t)=C_{I}(t)+C_{V-}(t)\\]\nEntonces el costo total esta dado por \\(C_{total}=\\sum_{t=0}^{365} (0.5)^{2}C(t)\\)\nLas recompensas estarán determinadas mediante las acciones tomadas en el estado anterior. En la siguiente sección profundizaremos sobre las acciones y las recompensas que proponemos que se consideren esta clase de modelos.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Descripción y justificación del costo</span>"
+    ]
   }
 ]
