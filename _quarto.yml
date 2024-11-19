@@ -9,7 +9,7 @@ book:
     - index.qmd
     - intro.qmd
     - Formulacion.qmd
-    - DinamicaMode.qmd
+    - DinamicaModel.qmd
     - summary.qmd
     - references.qmd
 
