@@ -1,8 +1,3 @@
+# Prefacio {.unnumbered}
 
-# Preface {.unnumbered}
-
-En este libro se desarrollara el proyecto de la clase de Aprendizaje Reforzado. 
-
-```{python}
-1 + 1
-```
+En este libro se desarrollara el proyecto de la clase de Aprendizaje Reforzado.
