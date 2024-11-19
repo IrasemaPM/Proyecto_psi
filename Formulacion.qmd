@@ -1,6 +1,6 @@
 # Formulación del Proceso de Decisión de Markov
 
-Los estados de nuestro proceso de decisión de Markov representarán la proporción de la población en cada categoría del modelo propuesto por XXX:
+Los estados de nuestro proceso de decisión de Markov representarán la proporción de la población en cada categoría del modelo propuesto por [@PedroMeza]:
 
 -   $S_{t}$: Fracción de susceptibles en el tiempo $t$.
 
