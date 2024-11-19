@@ -54,7 +54,7 @@
     "href": "acciones.html",
     "title": "5  Justificación de las acciones",
     "section": "",
-    "text": "En la sección ?sec-DModel se observo como el conjunto principal de acciones que se consideran. En esta sección se definirán explícitamente estas acciones.\n\nPortarse bien: serán los valores cuando \\(\\psi=0.5,0.6,0.7\\) o \\(\\psi=0.8\\)\nPortarse normal: serán los valores cuando \\(\\psi=0.9,1,1.2\\)\nPortarse mal: serán los valores cuando \\(\\psi=1.3,1.4,\\dots\\) o \\(\\psi=2\\)",
+    "text": "En la sección 3 se observo como el conjunto principal de acciones que se consideran esta dada por intervalos. Consideramos que los valores de \\(\\psi\\) va aumentando o disminuyendo en \\(0.1\\). Lo que nos lleva\n\nPortarse bien: serán los valores cuando \\(\\psi=0.5,0.6,0.7\\) o \\(\\psi=0.8\\)\nPortarse normal: serán los valores cuando \\(\\psi=0.9,1,1.2\\)\nPortarse mal: serán los valores cuando \\(\\psi=1.3,1.4,\\dots\\) o \\(\\psi=2\\)\n\nCada una de estas acciones deben tener una recompensa y estara dada por la siguiente tabla\n\n\n\n\n\n\n\n\n\\[              \nX_{t}            \n\\]\n\\[              \n                   X_{t+1}          \n                   \\]\nRecompesa\n\n\n\n\nPortarse bien\nPortarse bien\n-0.5\n\n\nPortarse bien\nPortarse normal\n1\n\n\nPortarse bien\nPortarse mal\n2\n\n\nPortarse normal\nPortarse bien\n0.5\n\n\nPortarse normal\nPortarse normal\n1\n\n\nPortarse normal\nPortarse mal\n-0.5\n\n\nPortarse mal\nPortarse bien\n-1\n\n\nPortarse mal\nPortarse normal\n-0.5\n\n\nPortarse mal\nPortarse mal\n0.5",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Justificación de las acciones</span>"
     ]
