@@ -4,7 +4,7 @@ lang: es
 book:
   title: "El valor optimo del indice de comportamiento"
   author: "Irasema Pedroza Meza"
-  date: "08/12/2024"
+  date: "12/08/2024"
   chapters:
     - index.qmd
     - intro.qmd
@@ -23,6 +23,11 @@ format:
   pdf:
     documentclass: scrreprt
     number-sections: true
-
+output:
+    html:
+      number-sections: true
+      crossref: true
+    pdf:
+      number-sections: true
 editor: visual
 
