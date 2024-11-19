@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
@@ -55,17 +55,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 
@@ -107,13 +107,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Formulacion.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Formulación del Proceso de Decisión de Markov</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -130,7 +130,7 @@ window.Quarto = {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -199,7 +199,7 @@ window.Quarto = {
 <ul>
 <li><p><span class="math inline">\(S_{t}\)</span>: Fracción de susceptibles en el tiempo <span class="math inline">\(t\)</span>.</p></li>
 <li><p><span class="math inline">\(V_{+t}\)</span>: Fracción de vacunados inmunes en el tiempo <span class="math inline">\(t\)</span>.</p></li>
-<li><p><span class="math inline">\(V_{-t}\)</span>: Fracción de vacunados no inmunes en el tiempo<span class="math inline">\(t\)</span>.</p></li>
+<li><p><span class="math inline">\(V_{-t}\)</span>: Fracción de vacunados no inmunes en el tiempo <span class="math inline">\(t\)</span>.</p></li>
 <li><p><span class="math inline">\(I_{t}\)</span>: Fracción de infectados en el tiempo <span class="math inline">\(t\)</span>.</p></li>
 <li><p><span class="math inline">\(R_{t}\)</span>: Fracción de recuperados en el tiempo <span class="math inline">\(t\)</span>.</p></li>
 </ul>
@@ -210,19 +210,19 @@ x_{t} = (S_{t}, V_{+t}, V_{-t}, I_{t}, R_{t})
 <p>El escenario que consideraremos para cada <span class="math inline">\(t \in {0,1,\dots, N}\)</span>para el proceso de Markov:</p>
 <ul>
 <li><span class="math inline">\(x_{t}\)</span>: representa la dinámica de la enfermedad en el tiempo <span class="math inline">\(t\)</span>.</li>
-<li><span class="math inline">\(a_{t}\)</span>: representa en qué escenario del índice de comportamiento se encuentra la población en el tiempo <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(a_{t}\)</span>: representa en qué escenario del índice de comportamiento se encuentra la población en el tiempo<span class="math inline">\(t\)</span>.</li>
 </ul>
 <p>Algunos supuestos que estaremos considerando para nuestro proceso son:</p>
 <ul>
-<li>Las personas cambian su comportamiento en el tiempo<span class="math inline">\(t\)</span> de forma instantánea.</li>
+<li>Las personas cambian su comportamiento en el tiempo <span class="math inline">\(t\)</span> de forma instantánea.</li>
 <li>Las únicas personas que pueden cambiar su comportamiento son los vacunados no inmunes.</li>
 <li>Supondremos que las personas cambian su comportamiento bajo una distribución uniforme <span class="math inline">\([0.5, 2]\)</span>.</li>
 </ul>
 <p>Bajo los supuestos anteriormente mencionados, consideramos el siguiente Modelo de Control de Markov.</p>
 <p><span class="math display">\[
-(\mathbf{X}, \mathbf{A}, \{A(x): x \in X\}, \mathbf{P}, \mathbf{C})
+(\mathbf{X},  \{A(x): x \in X\}, \mathbf{P}, \mathbf{C})
 \]</span></p>
-<p>donde <span class="math inline">\(X\)</span> es el espacio de los</p>
+<p>donde <span class="math inline">\(\mathbf{X}\)</span> es el espacio de los estados, $ {A(x): x X}$ es el espacio de las acciones admisibles, <span class="math inline">\(\mathbf{P}\)</span> es la ley de transicion de modelo y <span class="math inline">\(\mathbf{C}\)</span> es la funcion de costo.</p>
 
 
 
@@ -270,12 +270,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiado");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiado");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

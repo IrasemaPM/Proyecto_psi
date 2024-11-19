@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
@@ -55,17 +55,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 
@@ -107,13 +107,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./DinamicaModel.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dinámica del Modelo</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -130,7 +130,7 @@ window.Quarto = {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -195,7 +195,15 @@ window.Quarto = {
 </header>
 
 
-<p>La dinámica del sistema evoluciona en el tiempo <span class="math inline">\(t\)</span> e</p>
+<p>En esta sección veremos cómo evoluciona el sistema atreves del tiempo <span class="math inline">\(t\)</span>. La dinámica de la enfermedad esta representando por la siguiente cadena de Markov</p>
+<p><span class="math display">\[S_{t+1}= \mu -\beta S_{t}I_{t}- (\mu + \phi)S_{t}+\omega V_{+t}+\xi R_{t} \]</span></p>
+<p><span class="math display">\[V_{+t+1}= \phi\_{+}(\sigma)S_{t}-(\mu+\omega) V_{+t}\]</span></p>
+<p><span class="math display">\[V_{-t+1}=\phi_{-}(\sigma)S_{t}- \psi(1-\sigma) \beta V_{-t} I-\mu V_{-t}\]</span></p>
+<p><span class="math display">\[I_{t+1}= \beta S_{t}I_{t}+\psi(1-\sigma) \beta V_{-t} I_{t} -(\mu+ \gamma)I_{t}\]</span></p>
+<p><span class="math display">\[ R_{t+1}=\gamma I_{t}-(\mu +\xi) R_{t}\]</span></p>
+<p>En la</p>
+<p>Las acciones representan los valores del índice de comportamiento <span class="math inline">\((\psi)\)</span>. Supondremos que los valores del índice de comportamiento están restringidos al intervalo <span class="math inline">\([0.5,2]\)</span>. Las acciones consideradas en nuestro modelo están dividas en tres principales acciones: - Si <span class="math inline">\(\psi\in [0.5,0.9)\)</span> entonces diremos que las personas se portan bien, es decir, que las personas siguen las medidas de prevención de forma estricta. - Si <span class="math inline">\(\psi\in [0.9,1.2]\)</span> entonces diremos que las personas se portan normal, es decir, que las personas siguen las medidas de prevención. - Si <span class="math inline">\(\psi\in (1.2,2]\)</span> entonces diremos que las personas se portan mal, es decir, que las personas no siguen las medidas de prevención.</p>
+<p>Supondremos que las personas toman decisiones diarias mediante unas distribución <span class="math inline">\(x_{t} \backsim Uni[0.5,2]\)</span> el periodo de observación será de un año. Como se ha mencionado con anterioridad el objetivo de este trabajo es encontrar el valor de <span class="math inline">\(\psi\)</span> que permita tener la incidencia acumulada más pequeña al final del año. Entonces la probabilidad de tener <span class="math inline">\(i\)</span> de incidencia acumulada y cambiar el comportamiento <span class="math inline">\(\alpha\)</span> en el tiempo <span class="math inline">\(t\)</span> y pasar al estado <span class="math inline">\(j\)</span> está dada por: <span class="math display">\[P_{ij}(\alpha)=P[x_{t+1}=j|x_{t}=i,a_{t}=\alpha]\]</span></p>
 
 
 
@@ -243,12 +251,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiado");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiado");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
