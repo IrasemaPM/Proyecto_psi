@@ -14,7 +14,10 @@ book:
     - acciones.qmd
 
 bibliography: Bibliografia.bib
-
+comments:
+    hypothesis:
+      theme: classic
+      openSidebar: True
 format:
   html:
     theme: cosmo

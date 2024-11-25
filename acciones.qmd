@@ -10,18 +10,18 @@ En la sección **3** se observo como el conjunto principal de acciones que se co
 
 Cada una de estas acciones deben tener una recompensa y estara dada por la siguiente tabla
 
-| $$              
- X_{t}            
- $$               | $$              
-                   X_{t+1}          
-                   $$               | Recompesa |
-|-----------------|-----------------|-----------|
-| Portarse bien   | Portarse bien   | -0.5      |
-| Portarse bien   | Portarse normal | 1         |
-| Portarse bien   | Portarse mal    | 2         |
-| Portarse normal | Portarse bien   | 0.5       |
-| Portarse normal | Portarse normal | 1         |
-| Portarse normal | Portarse mal    | -0.5      |
-| Portarse mal    | Portarse bien   | -1        |
-| Portarse mal    | Portarse normal | -0.5      |
-| Portarse mal    | Portarse mal    | 0.5       |
+| $$                 
+  X_{t}              
+  $$                 | $$                                   
+                                         X_{t+1}            
+                                         $$                 | Recompesa |
+|--------------------|--------------------------------------|-----------|
+| Portarse bien      | Portarse bien                        | -0.5      |
+| Portarse bien      | Portarse normal                      | 1         |
+| Portarse bien      | Portarse mal                         | 2         |
+| Portarse normal    | Portarse bien                        | 0.5       |
+| Portarse normal    | Portarse normal                      | 1         |
+| Portarse normal    | Portarse mal                         | -0.5      |
+| Portarse mal       | Portarse bien                        | -1        |
+| Portarse mal       | Portarse normal                      | -0.5      |
+| Portarse mal       | Portarse mal                         | 0.5       |
