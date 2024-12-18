@@ -129,4 +129,7 @@ Finalmente, en esta última figura se muestran las consecuencias de tomar ese co
 
 ![La prevalencia de la enfermedad en cada año.](prevalencia.png){#prevalencia}
 
-Con las Figuras anteriores se puede observar como el año 2 y 3 pueden terne la misma recompensa pero en la selecion de los valores de $\psi$ son diferentes.
+Con las Figuras anteriores se puede observar como el año 2 y 3 pueden terne la misma recompensa pero en la selecion de los valores de $\psi$ son diferentes. Finalmente concluimos este proyecto con un video que explique un poco estos resultados mencionados.
+
+{{<https://youtu.be/TGxwYWF3zRI>}}
+
