@@ -22,6 +22,7 @@ Cada una de estas acciones deben tener una recompensa y estara dada por la sigui
 | Portarse normal    | Portarse bien                        | 0.5       |
 | Portarse normal    | Portarse normal                      | 1         |
 | Portarse normal    | Portarse mal                         | -0.5      |
-| Portarse mal       | Portarse bien                        | -1        |
-| Portarse mal       | Portarse normal                      | -0.5      |
-| Portarse mal       | Portarse mal                         | 0.5       |
+| Portarse mal       | Portarse bien                        |  1        |
+| Portarse mal       | Portarse normal                      |  0.5      |
+| Portarse mal       | Portarse mal                         | -1        |  |-------------------------------------------------------------------------
+

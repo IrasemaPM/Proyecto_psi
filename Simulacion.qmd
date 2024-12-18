@@ -1,0 +1,49 @@
+# Simulaciones del proceso de Markov
+
+Hemos realizado simulaciones con el programa R en cual nos permitira visulizar el proceso al momento de tomar cada una de estas decciones, i.e, si las personas siguieron o abandonaron las medidas de prevencion. Tambien motraremos como se son las recomenpsas de estas acciones.
+
+Primero definiremos la funcion donde guaradara nuetro sistema de ecuaciones diferenciales
+
+```{r}
+### Código en R
+EDO_SVVIR_Normalizado <- function(Time, State, Pars) {
+  with(as.list(c(State, Pars)), {
+    dS <- mu - (vbeta * S * I) - (mu + phi) * S + (omega * V_plus) + (xi * R)
+    dV_plus <- phi_plus * S - (mu + omega) * V_plus
+    dV_minus <- phi_minus * S - ((c * vbeta) * (V_minus * I)) - mu * V_minus
+    dI <- (vbeta * S * I) + ((c * vbeta) * (V_minus * I)) - (mu + vgamma) * I
+    dR <- (vgamma * I) - (mu + xi) * R
+
+    return(list(c(dS, dV_plus, dV_minus, dI, dR)))
+  })
+}
+
+```
+
+Ahora definiremos los valores de los parametros que necesarios para el sistema de ecuaciones diferenciales.
+
+```{r}
+# Limpiar la memoria de las variables
+rm(list = ls())
+
+# Paquetes necesarios para simulación
+library(deSolve)
+library(plotly)
+
+# Sistema de ecuaciones
+source("EDO_SVVIR_Normalizado.R", local = FALSE)
+
+# Parámetros iniciales
+mu <- 1 / (70 * 365)
+omega <- 0.02
+vgamma <- 1 / 14
+p <- 0.7
+vsigma <- 0.75
+p_e <- p * vsigma
+vT <- 35
+phi_plus <- (-log(1 - p_e)) / vT
+phi_minus <- (1 / vT) * log((1 - p_e) / (1 - p))
+phi <- phi_plus + phi_minus
+xi <- 1 / 30
+vbeta <- 0.270
+```
