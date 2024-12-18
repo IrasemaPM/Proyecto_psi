@@ -1,9 +1,8 @@
 # Simulaciones del proceso de Markov
 
-Hemos realizado simulaciones con el programa R en cual nos permitira visulizar el proceso al momento de tomar cada una de estas decciones, i.e, si las personas siguieron o abandonaron las medidas de prevencion. Tambien motraremos como se son las recomenpsas de estas acciones.
+Hemos realizado simulaciones utilizando el programa R, el cual nos permitirá visualizar el proceso de toma de decisiones en cada caso, i.e., si las personas siguieron o abandonaron las medidas de prevención. Además, mostraremos cómo son las recompensas asociadas a estas acciones.
 
-Primero definiremos la funcion donde guaradara nuetro sistema de ecuaciones diferenciales
-
+Primero, definiremos la función que almacenará nuestro sistema de ecuaciones diferenciales.
 ``` r
 EDO_SVVIR_Normalizado <- function(Time, State, Pars) {
   with(as.list(c(State, Pars)), {
@@ -18,7 +17,7 @@ EDO_SVVIR_Normalizado <- function(Time, State, Pars) {
 }
 ```
 
-Ahora definiremos los valores de los parametros que necesarios para el sistema de ecuaciones diferenciales.
+Ahora definiremos los valores de los parámetros necesarios para el sistema de ecuaciones diferenciales
 
 ``` r
 # Limpiar la memoria de las variables
@@ -45,8 +44,7 @@ phi <- phi_plus + phi_minus
 xi <- 1 / 30
 vbeta <- 0.270
 ```
-
-En el siguiente codigo mostraremos los pasos a seguir para poder realizar las simualciones del proceso de Markov
+En el siguiente código, mostraremos los pasos a seguir para realizar las simulaciones del proceso de Markov.
 
 ``` R
 # Simulaciones del modelo
@@ -117,6 +115,8 @@ for (k in 1:n) {
 }
 ```
 
-Siguiendo los codigos anteriores podemos desarrollar llas simualciones necesarias para ilustrar las dinamica del proceso de Markov. En el siguiente ecenarios que vamos mostrar es tomando decision cada 100 dias durante un año, cada simulacion representara un diferente año de observacion.
+Siguiendo los códigos anteriores, podemos desarrollar las simulaciones necesarias para ilustrar la dinámica del proceso de Markov. En el siguiente escenario que mostraremos, se toma una decisión cada 100 días durante un año. Cada simulación representará un año diferente de observación.
+
+
 
 

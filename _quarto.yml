@@ -12,7 +12,7 @@ book:
     - DinamicaModel.qmd
     - costo.qmd
     - acciones.qmd
-    #- Simulacion.qmd
+    - Simulacion.qmd
     - Bibliografia.bib
 
 bibliography: Bibliografia.bib
