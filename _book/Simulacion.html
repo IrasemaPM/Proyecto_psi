@@ -224,8 +224,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Hemos realizado simulaciones con el programa R en cual nos permitira visulizar el proceso al momento de tomar cada una de estas decciones, i.e, si las personas siguieron o abandonaron las medidas de prevencion. Tambien motraremos como se son las recomenpsas de estas acciones.</p>
-<p>Primero definiremos la funcion donde guaradara nuetro sistema de ecuaciones diferenciales</p>
+<p>Hemos realizado simulaciones utilizando el programa R, el cual nos permitirá visualizar el proceso de toma de decisiones en cada caso, i.e., si las personas siguieron o abandonaron las medidas de prevención. Además, mostraremos cómo son las recompensas asociadas a estas acciones.</p>
+<p>Primero, definiremos la función que almacenará nuestro sistema de ecuaciones diferenciales.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>EDO_SVVIR_Normalizado <span class="ot">&lt;-</span> <span class="cf">function</span>(Time, State, Pars) {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">with</span>(<span class="fu">as.list</span>(<span class="fu">c</span>(State, Pars)), {</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    dS <span class="ot">&lt;-</span> mu <span class="sc">-</span> (vbeta <span class="sc">*</span> S <span class="sc">*</span> I) <span class="sc">-</span> (mu <span class="sc">+</span> phi) <span class="sc">*</span> S <span class="sc">+</span> (omega <span class="sc">*</span> V_plus) <span class="sc">+</span> (xi <span class="sc">*</span> R)</span>
@@ -237,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="fu">c</span>(dS, dV_plus, dV_minus, dI, dR)))</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  })</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Ahora definiremos los valores de los parametros que necesarios para el sistema de ecuaciones diferenciales.</p>
+<p>Ahora definiremos los valores de los parámetros necesarios para el sistema de ecuaciones diferenciales</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Limpiar la memoria de las variables</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -261,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>phi <span class="ot">&lt;-</span> phi_plus <span class="sc">+</span> phi_minus</span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>xi <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">30</span></span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>vbeta <span class="ot">&lt;-</span> <span class="fl">0.270</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>En el siguiente codigo mostraremos los pasos a seguir para poder realizar las simualciones del proceso de Markov</p>
+<p>En el siguiente código, mostraremos los pasos a seguir para realizar las simulaciones del proceso de Markov.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulaciones del modelo</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) {</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  t0 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
@@ -328,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>  Mpsi[, k] <span class="ot">&lt;-</span> vpsi</span>
 <span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>  Mnames[, k] <span class="ot">&lt;-</span> velec</span>
 <span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Siguiendo los codigos anteriores podemos desarrollar llas simualciones necesarias para ilustrar las dinamica del proceso de Markov. En el siguiente ecenarios que vamos mostrar es tomando decision cada 100 dias durante un año, cada simulacion representara un diferente año de observacion.</p>
+<p>Siguiendo los códigos anteriores, podemos desarrollar las simulaciones necesarias para ilustrar la dinámica del proceso de Markov. En el siguiente escenario que mostraremos, se toma una decisión cada 100 días durante un año. Cada simulación representará un año diferente de observación.</p>
 
 
 
