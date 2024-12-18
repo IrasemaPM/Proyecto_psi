@@ -3,6 +3,7 @@
 Hemos realizado simulaciones utilizando el programa R, el cual nos permitirá visualizar el proceso de toma de decisiones en cada caso, i.e., si las personas siguieron o abandonaron las medidas de prevención. Además, mostraremos cómo son las recompensas asociadas a estas acciones.
 
 Primero, definiremos la función que almacenará nuestro sistema de ecuaciones diferenciales.
+
 ``` r
 EDO_SVVIR_Normalizado <- function(Time, State, Pars) {
   with(as.list(c(State, Pars)), {
@@ -44,9 +45,10 @@ phi <- phi_plus + phi_minus
 xi <- 1 / 30
 vbeta <- 0.270
 ```
+
 En el siguiente código, mostraremos los pasos a seguir para realizar las simulaciones del proceso de Markov.
 
-``` R
+``` r
 # Simulaciones del modelo
 for (k in 1:n) {
   t0 <- 0
@@ -115,8 +117,6 @@ for (k in 1:n) {
 }
 ```
 
-Siguiendo los códigos anteriores, podemos desarrollar las simulaciones necesarias para ilustrar la dinámica del proceso de Markov. En el siguiente escenario que mostraremos, se toma una decisión cada 100 días durante un año. Cada simulación representará un año diferente de observación.
+Siguiendo los códigos anteriores, podemos desarrollar las simulaciones necesarias para ilustrar la dinámica del proceso de Markov. En el siguiente escenario que mostraremos, se toma una decisión cada 100 días durante un año. Cada simulación representará un año diferente. En la siguiente grafica se muestra los diferentes valores de $\psi$ que se tomaron cada
 
-
-
-
+![Graficas de los valores de $\psi$.](valores_psi.png){#graficaspsi}
