@@ -4,8 +4,7 @@ Hemos realizado simulaciones con el programa R en cual nos permitira visulizar e
 
 Primero definiremos la funcion donde guaradara nuetro sistema de ecuaciones diferenciales
 
-```{r}
-### Código en R
+``` r
 EDO_SVVIR_Normalizado <- function(Time, State, Pars) {
   with(as.list(c(State, Pars)), {
     dS <- mu - (vbeta * S * I) - (mu + phi) * S + (omega * V_plus) + (xi * R)
@@ -17,12 +16,11 @@ EDO_SVVIR_Normalizado <- function(Time, State, Pars) {
     return(list(c(dS, dV_plus, dV_minus, dI, dR)))
   })
 }
-
 ```
 
 Ahora definiremos los valores de los parametros que necesarios para el sistema de ecuaciones diferenciales.
 
-```{r}
+``` R
 # Limpiar la memoria de las variables
 rm(list = ls())
 
