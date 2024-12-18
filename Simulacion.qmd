@@ -117,6 +117,16 @@ for (k in 1:n) {
 }
 ```
 
-Siguiendo los códigos anteriores, podemos desarrollar las simulaciones necesarias para ilustrar la dinámica del proceso de Markov. En el siguiente escenario que mostraremos, se toma una decisión cada 100 días durante un año. Cada simulación representará un año diferente. En la siguiente grafica se muestra los diferentes valores de $\psi$ que se tomaron cada
+Siguiendo los códigos anteriores, podemos desarrollar las simulaciones necesarias para ilustrar la dinámica del proceso de Markov. En el siguiente escenario, se toma una decisión cada 100 días durante un año, y cada simulación representa un año diferente. En la siguiente gráfica, se muestran los diferentes valores de $\psi$ asociados a las decisiones tomadas por las personas, ya sea seguir o no las medidas de prevención
 
 ![Graficas de los valores de $\psi$.](valores_psi.png){#graficaspsi}
+
+En la siguiente gráfica, mostramos cómo serían las recompensas correspondientes a cada una de las decisiones tomadas. Estas recompensas están relacionadas con la tabla presentada en la Sección 5 de este documento.
+
+![Se muetra las diferentes recompensas para cada uno de los valores de $\psi$.](recompensa.png){#figrecompensa}
+
+Finalmente, en esta última figura se muestran las consecuencias de tomar ese conjunto de decisiones en la prevalencia de la enfermedad.
+
+![La prevalencia de la enfermedad en cada año.](prevalencia.png){#prevalencia}
+
+Con las Figuras anteriores se puede observar como el año 2 y 3 pueden terne la misma recompensa pero en la selecion de los valores de $\psi$ son diferentes.
