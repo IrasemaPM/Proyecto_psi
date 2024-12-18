@@ -20,7 +20,7 @@ EDO_SVVIR_Normalizado <- function(Time, State, Pars) {
 
 Ahora definiremos los valores de los parametros que necesarios para el sistema de ecuaciones diferenciales.
 
-``` R
+``` r
 # Limpiar la memoria de las variables
 rm(list = ls())
 
@@ -45,3 +45,78 @@ phi <- phi_plus + phi_minus
 xi <- 1 / 30
 vbeta <- 0.270
 ```
+
+En el siguiente codigo mostraremos los pasos a seguir para poder realizar las simualciones del proceso de Markov
+
+``` R
+# Simulaciones del modelo
+for (k in 1:n) {
+  t0 <- 0
+  T0 <- 65
+  t <- 1
+  RejillaTiempo <- seq(from = t0, to = T0, by = 1 / t)
+  
+  vecTime <- numeric()
+  velec <- character()
+  vpsi <- numeric()
+  
+  psi0 <- runif(1, 0.5, 2)
+  vpsi[1] <- psi0
+  c <- (1 - vsigma) * psi0
+  
+  vpar <- c(
+    vbeta = vbeta, mu = mu, phi = phi, omega = omega,
+    xi = xi, phi_plus = phi_plus, phi_minus = phi_minus,
+    c = c, vgamma = vgamma
+  )
+  
+  outSVVIR <- ode(yinicial, RejillaTiempo, EDO_SVVIR_Normalizado, vpar, method = "lsoda")
+  vPI <- numeric()
+  vPI[1] <- outSVVIR[T0, 5] * 10000
+  
+  velec[1] <- if (0.5 < psi0 && psi0 < 0.9) {
+    "bien"
+  } else if (0.9 <= psi0 && psi0 <= 1.2) {
+    "normal"
+  } else {
+    "mal"
+  }
+  
+  vecTime[1] <- T0
+  
+  for (i in 1:3) {
+    T0 <- 65 + (100 * i)
+    RejillaTiempo <- seq(from = t0, to = T0, by = 1 / t)
+    vecTime[i + 1] <- T0
+    
+    psi0 <- runif(1, 0.5, 2)
+    c <- (1 - vsigma) * psi0
+    vpsi[i + 1] <- psi0
+    
+    vpar <- c(
+      vbeta = vbeta, mu = mu, phi = phi, omega = omega,
+      xi = xi, phi_plus = phi_plus, phi_minus = phi_minus,
+      c = c, vgamma = vgamma
+    )
+    
+    outSVVIR <- ode(yinicial, RejillaTiempo, EDO_SVVIR_Normalizado, vpar, method = "lsoda")
+    vPI[i + 1] <- outSVVIR[T0, 5] * 10000
+    
+    velec[i + 1] <- if (0.5 < psi0 && psi0 < 0.9) {
+      "bien"
+    } else if (0.9 <= psi0 && psi0 <= 1.2) {
+      "normal"
+    } else {
+      "mal"
+    }
+  }
+  
+  MPI[, k] <- vPI
+  Mpsi[, k] <- vpsi
+  Mnames[, k] <- velec
+}
+```
+
+Siguiendo los codigos anteriores podemos desarrollar llas simualciones necesarias para ilustrar las dinamica del proceso de Markov. En el siguiente ecenarios que vamos mostrar es tomando decision cada 100 dias durante un año, cada simulacion representara un diferente año de observacion.
+
+
